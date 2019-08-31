@@ -1,0 +1,35 @@
+{
+  "name": "cloud-functions-typescript",
+  "version": "0.1.0",
+  "description": "Starter kit for Google Cloud Functions using TypeScript",
+  "main": "build/index.js",
+  "config": {
+    "project": "projectName",
+    "function": "helloWorld"
+  },
+  "scripts": {
+    "start": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"yarn watch-ts\" \"yarn watch-node\"",
+    "host": "functions-framework --target=$npm_package_config_function",
+    "watch-node": "nodemon --watch ./build/ --exec yarn host",
+    "watch-ts": "tsc --watch",
+    "build": "tsc",
+    "deploy": "yarn build && gcloud functions deploy $npm_package_config_function --runtime nodejs10 --trigger-http --entry-point $npm_package_config_function --project $npm_package_config_project"
+  },
+  "author": "dambusm",
+  "license": "MIT",
+  "devDependencies": {
+    "@google-cloud/functions-framework": "^1.2.1",
+    "@types/express": "^4.17.1",
+    "@types/node": "10.14.17",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "concurrently": "^4.1.2",
+    "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2",
+    "typescript": "^3.6.2"
+  }
+}
