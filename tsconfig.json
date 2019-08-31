@@ -1,17 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2018",
     "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": false,
     "noEmit": false,
-    "lib": ["es2017", "dom"],
+    "lib": ["es2018", "dom"],
     "outDir": "build"
   },
   "include": ["src"]
