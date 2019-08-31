@@ -15,7 +15,7 @@
     "build": "tsc",
     "deploy": "yarn build && gcloud functions deploy $npm_package_config_function --runtime nodejs10 --trigger-http --entry-point $npm_package_config_function --project $npm_package_config_project"
   },
-  "author": "dambusm",
+  "author": "Will Schaller",
   "license": "MIT",
   "devDependencies": {
     "@google-cloud/functions-framework": "^1.2.1",
