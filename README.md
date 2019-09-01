@@ -1,9 +1,12 @@
-🔖 Starter kit for Google Cloud Functions using TypeScript, with:
+🔖 Starter kit for Google Cloud Functions using TypeScript.
 
-* Functions Framework local hosting
-* Nodemon reloading
-* TypeScript ESLint
-* Prettier
+✅ Run functions locally (functions framework)
+
+✅ Live reloading (nodemon)
+
+✅ TypeScript ESLint
+
+✅ Prettier
 
 ##### Requirements
 
